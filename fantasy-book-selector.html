@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <title>Fantasy Book Selector</title>
+    <body>
+        <h1>Fantasy Book Selector</h1>
+        
+        <label id="books">What should the setting be?</label>
+
+        <select id="genre">
+            <option value=" ">Select One</option>
+            <option value="Dystopian/Sci-fi">Dystopian/Sci-fi</option>
+            <option value="Animal Society">Animal Society</option>
+            <option value="Fairytale/Supernatural">Fairytale/Supernatural</option>
+            <option value="Mythological">Mythological</option>
+        </select>
+        
+        <br><br>
+        
+        <button id="read?">What should I read?</button>
+        
+        <p>You should read... <span id="novel"></span></p>
+
+   <script>
+   
+   var books = [
+       {
+           "name": "Camp Half-Blood Chronicles",
+           "genre": "Mythological",
+           "link": "https://en.wikipedia.org/wiki/Camp_Half-Blood_Chronicles",
+           "Length": "15 books"
+       },
+       
+       {
+           "name": "The Kane Chronicles",
+           "genre": "Mythological",
+           "link": "https://en.wikipedia.org/wiki/The_Kane_Chronicles",
+           "Length": "3 books"
+       },
+       
+        {
+           "name": "Magnus Chase and the Gods of Asgard",
+           "genre": "Mythological",
+           "link": "https://en.wikipedia.org/wiki/Magnus_Chase_and_the_Gods_of_Asgard",
+           "Length": "3 books"
+       },
+       
+       {
+           "name": "The Hunger Games Trilogy",
+           "genre": "Dystopian/Sci-fi",
+           "link": "https://en.wikipedia.org/wiki/The_Hunger_Games",
+           "Length": "3 books"
+       },
+       
+       {
+           "name": "The Maze Runner",
+           "genre": "Dystopian/Sci-fi",
+           "link": "https://en.wikipedia.org/wiki/The_Maze_Runner_(book_series)",
+           "Length": "3 books"
+       },
+       
+       {
+           "name": "The Lunar Chronicles",
+           "genre": "Fairytale/Supernatural",
+           "link": "https://en.wikipedia.org/wiki/The_Lunar_Chronicles",
+           "Length": "4 books"
+       },
+       
+       {
+           "name": "The Shadowhunter Chronicles",
+           "genre": "Fairytale/Supernatural",
+           "link": "https://en.wikipedia.org/wiki/The_Shadowhunter_Chronicles",
+           "Length": "17+ books (New novels are being published)" 
+       },
+       
+       {
+           "name": "Harry Potter",
+           "genre": "Fairytale/Supernatural",
+           "link": "https://en.wikipedia.org/wiki/Harry_Potter",
+           "Length": "7 books"
+       },
+       
+       {
+           "name": "Warrior Cats",
+           "genre": "Animal Society",
+           "link": "https://en.wikipedia.org/wiki/Warriors_(novel_series)",
+           "Length": "45+ books (New novels are being published)"
+       },
+       
+       {
+           "name": "Wings of Fire",
+           "genre": "Animal Society",
+           "link": "https://en.wikipedia.org/wiki/Wings_of_Fire_(novel_series)",
+           "Length": "15 books"
+       },
+       
+       {
+           "name": " ",
+           "genre": " ",
+           "link": " ",
+           "Length": " "
+       },
+    ]
+   
+   var readButton = document.getElementById("read?");
+   
+   var genre = document.getElementById("genre")
+   
+   var readIt = function() {
+       
+       var novelDiv = document.getElementById("novel");
+       
+       var selectedGenre = genre.value;
+       
+       var bookListHTML = "<ol>";
+       
+       for (var i = 0; i < books.length; i++) {
+           if (selectedGenre === books[i].genre) {
+               bookListHTML += "<li>" + books[i].name + " (" + books[i].genre + "). <br> Link: " + books[i].link + "<br>" + "Length (Main series book only): " + books[i].Length;
+           }
+       }
+       
+    bookListHTML += "</ol>"
+    
+    novelDiv.innerHTML = bookListHTML;
+   }
+   
+   readButton.addEventListener("click", readIt)
+   
+   /*
+   Camp Half-Blood Chronicles, The Kane Chronicles, Magnus Chase and the God of Asgard
+   
+   The Hunger Games Trilogy, The Maze Runner
+   
+   The Lunar Chronicles, The Shadowhunter Chronicles, Harry Potter
+   
+   Warrior Cats, Wings of Fire
+   */
+   </script>
+   </body>
+</html>
