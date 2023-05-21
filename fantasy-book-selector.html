@@ -111,15 +111,15 @@
        
        var selectedGenre = genre.value;
        
-       var bookListHTML = "<ol>";
+       var bookListHTML = "<ul>";
        
        for (var i = 0; i < books.length; i++) {
            if (selectedGenre === books[i].genre) {
-               bookListHTML += "<li>" + books[i].name + " (" + books[i].genre + "). <br> Link: " + books[i].link + "<br>" + "Length (Main series book only): " + books[i].Length;
+               bookListHTML += "<li>" + books[i].name + " (" + books[i].genre + "). <br> Link: <a href=\"books[i].link\">" + books[i].link + "</a>" + "<br>" + "Length (Main series book only): " + books[i].Length;
            }
        }
        
-    bookListHTML += "</ol>"
+    bookListHTML += "</ul>"
     
     novelDiv.innerHTML = bookListHTML;
    }
