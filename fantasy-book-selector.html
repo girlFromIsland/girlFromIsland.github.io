@@ -27,77 +27,87 @@
            "name": "Camp Half-Blood Chronicles",
            "genre": "Mythological",
            "link": "https://en.wikipedia.org/wiki/Camp_Half-Blood_Chronicles",
-           "Length": "15 books"
+           "Length": "15 books",
+           "img": "https://m.media-amazon.com/images/I/91LptBSFxQL._AC_UF1000,1000_QL80_.jpg"
        },
        
        {
            "name": "The Kane Chronicles",
            "genre": "Mythological",
            "link": "https://en.wikipedia.org/wiki/The_Kane_Chronicles",
-           "Length": "3 books"
+           "Length": "3 books",
+           "img": "https://m.media-amazon.com/images/I/51EEnxnb6fL.jpg"
        },
        
         {
            "name": "Magnus Chase and the Gods of Asgard",
            "genre": "Mythological",
            "link": "https://en.wikipedia.org/wiki/Magnus_Chase_and_the_Gods_of_Asgard",
-           "Length": "3 books"
+           "Length": "3 books",
+           "img": "https://img.grouponcdn.com/deal/NGMBYd1j4wWXLPbvaAoqNaMFYjw/NG-2048x1229/v1/t600x362.jpg"
        },
        
        {
            "name": "The Hunger Games Trilogy",
            "genre": "Dystopian/Sci-fi",
            "link": "https://en.wikipedia.org/wiki/The_Hunger_Games",
-           "Length": "3 books"
+           "Length": "3 books",
+           "img": "https://upload.wikimedia.org/wikipedia/en/3/39/The_Hunger_Games_cover.jpg"
        },
        
        {
            "name": "The Maze Runner",
            "genre": "Dystopian/Sci-fi",
            "link": "https://en.wikipedia.org/wiki/The_Maze_Runner_(book_series)",
-           "Length": "3 books"
+           "Length": "3 books",
+           "img": "https://m.media-amazon.com/images/I/91IJ2rIOEDL._AC_UF1000,1000_QL80_.jpg"
        },
        
        {
            "name": "The Lunar Chronicles",
            "genre": "Dystopian/Sci-fi",
            "link": "https://en.wikipedia.org/wiki/The_Lunar_Chronicles",
-           "Length": "4 books"
+           "Length": "4 books",
+           "img": "https://www.epl.org/wp-content/uploads/2016/11/lunarchronicles-e1477962343764.jpg"
        },
        
        {
            "name": "The Shadowhunter Chronicles",
            "genre": "Supernatural",
            "link": "https://en.wikipedia.org/wiki/The_Shadowhunter_Chronicles",
-           "Length": "17+ books (New novels are being published)" 
+           "Length": "17+ books (New novels are being published)",
+           "img": "https://media.encycla.com/f48a15f603f3412afb8e9e253e95e90968ae6c2e_1440w_1.jpg" 
        },
        
        {
            "name": "Harry Potter",
            "genre": "Supernatural",
            "link": "https://en.wikipedia.org/wiki/Harry_Potter",
-           "Length": "7 books"
+           "Length": "7 books",
+           "img": "https://kids.scholastic.com/content/kids64/en/books/harry-potter/_jcr_content/root/responsivegrid/responsivegrid_1333535796/responsivegrid/image_509271170.coreimg.100.1024.png/1675460897278/mgp-covers-mobile.png"
        },
        
        {
            "name": "Warrior Cats",
            "genre": "Animal Society",
            "link": "https://en.wikipedia.org/wiki/Warriors_(novel_series)",
-           "Length": "45+ books (New novels are being published)"
+           "Length": "45+ books (New novels are being published)",
+           "img": "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780062366962_p0_v2_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D"
        },
        
        {
            "name": "Wings of Fire",
            "genre": "Animal Society",
            "link": "https://en.wikipedia.org/wiki/Wings_of_Fire_(novel_series)",
-           "Length": "15 books"
+           "Length": "15 books",
+           "img": "https://m.media-amazon.com/images/I/91yBSJyD40L._AC_UF1000,1000_QL80_.jpg"
        },
        
        {
            "name": " ",
            "genre": " ",
            "link": " ",
-           "Length": " "
+           "Length": " ",
        },
     ]
    
@@ -115,7 +125,7 @@
        
        for (var i = 0; i < books.length; i++) {
            if (selectedGenre === books[i].genre) {
-               bookListHTML += "<li>" + books[i].name + " (" + books[i].genre + "). <br> Link: <a href=\"" + books[i].link + "\">" + books[i].link + "</a>" + "<br>" + "Length (Main series book only): " + books[i].Length;
+               bookListHTML += "<li>" + books[i].name + " (" + books[i].genre + "). <br> Link: <a href=\"" + books[i].link + "\">" + books[i].link + "</a>" + "<br>" + "Length (Main series book only): " + books[i].Length + "<br> Image: <img src=\"" + books[i].img + "\" width=150>";
            }
        }
        
