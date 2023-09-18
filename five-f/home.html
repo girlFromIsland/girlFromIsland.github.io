@@ -12,32 +12,75 @@
             background-color: rgb(230, 230, 230);
         }
         p {
-            font-size: 25px;
+            font-size: 15px;
         }
         
         h1 {
-            font-size: 60px;
+            font-size: 30px;
         }
+        .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
     </style>
     <body>
     
         <h1 id = "heading">Kit Herondale in Queen of Air and Darkness</h1>
-        <p>There was a lot of controversy surrounding Kit and his decision to leave Los Angeles. However, I believe Kit’s decision makes total sense for his character. He spent his whole life without love. In all his childhood years, he was neglected and was taught that he wasn’t worthy of love. 
-        <br>
-        <br>
-        <em>"Tessa says my mom loved me, but I never knew her. She didn't know me. My dad knew me, and he didn't care. Don't say he did. I know he didn't. But he loved my mom, apparently, so it wasn't that he couldn't love anyone. It was that he couldn't love me. And---and the---and---nobody else has, either. I wasn't enough, to stop---I wasn't enough. I've never been enough, not for anyone, and I'm trying, but I don't know if I ever will be" -- Kit Herondale,</em> Ghosts of the Shadow Market
-        <br><br>
-            On the other hand, while Johnny Rook didn’t love Kit as much as he should, he was still a constant support in Kit’s life. When Johnny Rook was murdered, he lost his whole world. He lost his family. He lost the only home he ever had—the Shadow Market. He clung to the Blackthorns as his only hope of belonging anywhere. 
-            <br>
-            <br>
-<em>“‘They hate me now,’ Kit said. ‘Everyone I used to know.’
+        <p>There was a lot of controversy surrounding Kit and his decision to leave Los Angeles. However, I believe Kit’s decision makes total sense for his character. He spent his whole life without love. In all his childhood years, he was neglected and was taught that he wasn’t worthy of love. </p>
+        
+        
+<button type="button" class="collapsible">Quote</button>
+
+<div class="content">
+  <p><em>"Tessa says my mom loved me, but I never knew her. She didn't know me. My dad knew me, and he didn't care. Don't say he did. I know he didn't. But he loved my mom, apparently, so it wasn't that he couldn't love anyone. It was that he couldn't love me. And---and the---and---nobody else has, either. I wasn't enough, to stop---I wasn't enough. I've never been enough, not for anyone, and I'm trying, but I don't know if I ever will be"</em> -- Kit Herondale, <em>Ghosts of the Shadow Market</em></p>
+</div>
+
+            <p>On the other hand, while Johnny Rook didn’t love Kit as much as he should, he was still a constant support in Kit’s life. When Johnny Rook was murdered, he lost his whole world. He lost his family. He lost the only home he ever had—the Shadow Market. He clung to the Blackthorns as his only hope of belonging anywhere. 
+ <br></p>
+            <button type="button" class="collapsible">Quote</button>
+<div class="content">
+  <p><em>“‘They hate me now,’ Kit said. ‘Everyone I used to know.’
 ‘No,’ said Julian. ‘They’re afraid of you. There’s a difference.’
-Maybe there was, Kit thought. But right now, he wasn’t sure if it mattered” (Lord of Shadows)
-</em>
-<br>
-<br>
-    But the Blackthorns don’t love Kit the way they love each other. Kit went through The Dark Artifices without love, except for Livvy and Ty. They included him in their games. They considered him a part of their unit. They were the first real friends he had. But now that Livvy’s dead, Kit believed he had no one besides Ty. This made Kit extra desperate not to lose Ty, the only person who he believed might love him. Most people can’t conceive the loneliness that Kit, a traumatized and neglected orphan, feels. Saying “I love you” to Ty is a very big deal to Kit. Ty is probably the only person he ever said those words to other than Johnny Rook. When Ty “rejected” Kit, he was humiliated. In his eyes, he didn’t matter to the only two people he ever loved. 
+Maybe there was, Kit thought. But right now, he wasn’t sure if it mattered” (Lord of Shadows)</em></p>
+</div>
+
+    <p>But the Blackthorns don’t love Kit the way they love each other. Kit went through The Dark Artifices without love, except for Livvy and Ty. They included him in their games. They considered him a part of their unit. They were the first real friends he had. But now that Livvy’s dead, Kit believed he had no one besides Ty. This made Kit extra desperate not to lose Ty, the only person who he believed might love him. Most people can’t conceive the loneliness that Kit, a traumatized and neglected orphan, feels. Saying “I love you” to Ty is a very big deal to Kit. Ty is probably the only person he ever said those words to other than Johnny Rook. When Ty “rejected” Kit, he was humiliated. In his eyes, he didn’t matter to the only two people he ever loved. 
 
         </p>
+        
+        <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
     </body>
 </html>
